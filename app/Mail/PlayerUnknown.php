@@ -29,7 +29,7 @@ class PlayerUnknown extends Mailable
      */
     public function build()
     {
-        $data = Price::orderBy('level', 'desc')->get();
+        $data = Price::orderBy('price', 'desc')->get();
         return $this->view('view.mail.hi', compact('data'));
     }
 }

@@ -74,7 +74,7 @@
 <body>
 {{--banner--}}
 {{--<img src="{{asset('storage/images/timg3.jpg')}}" alt="" width="100%" height="139">--}}
-<img src="http://imglf5.nosdn.127.net/img/Q2J2aDM4bkx6RmhrVld6L2lkMUthcmZaSXJzNzloSFJET0IzQ1BNSXMzZXREY1g0emYrcjhRPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg" alt="" width="100%" height="139">
+<img src="https://s1.ax1x.com/2017/11/26/fKDsg.jpg" alt="" width="100%" height="139">
 {{--标题--}}
 <div class="title">
     <div class="title-title" style="margin-top:10px;

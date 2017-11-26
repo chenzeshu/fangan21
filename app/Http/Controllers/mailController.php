@@ -12,9 +12,13 @@ class mailController extends Controller
 {
     public function send()
     {
-       $user = User::first();
+       $users = User::all();
 
-        Mail::to($user)->send(new PlayerUnknown());
+       foreach ($users as $user){
+           $job = new \App\Jobs\mail($user);
+           $this->dispatch($job);
+       }
+//        Mail::to($user)->send(new PlayerUnknown());
 
         echo "success";
     }
