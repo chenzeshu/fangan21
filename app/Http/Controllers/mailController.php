@@ -31,4 +31,13 @@ class mailController extends Controller
         $data = Price::orderBy('day')->get();
         return view('view.mail.hi', compact('data'));
     }
+
+    public function test()
+    {
+        $users = User::all();
+        foreach ($users as $user){
+            Mail::to($user)->send(new PlayerUnknown());
+        }
+        echo "success";
+    }
 }
