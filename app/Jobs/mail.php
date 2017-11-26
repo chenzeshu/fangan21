@@ -34,5 +34,6 @@ class mail implements ShouldQueue
     public function handle()
     {
         \Illuminate\Support\Facades\Mail::to($this->user)->send(new PlayerUnknown());
+        $this->job->delete();
     }
 }
