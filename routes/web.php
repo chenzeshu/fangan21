@@ -19,5 +19,5 @@ Route::get('/data', 'dataController@index');
 Route::get('/ql', 'dataController@ql');
 
 
-Route::get('/send', 'mailController@send');
+Route::get('/send/{number}', 'mailController@send');
 Route::get('/show', 'mailController@show');

@@ -4,24 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Mail\PlayerUnknown;
 use App\Models\Price;
+use App\Models\Qer;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class mailController extends Controller
 {
-    public function send()
+    /**
+     * $number offsetNumber
+     */
+    public function send($number)
     {
-       $users = User::all();
+       $users = Qer::offset($number)->limit(200)->get();
 
        foreach ($users as $user){
            $job = new \App\Jobs\mail($user);
            $this->dispatch($job);
        }
-//        Mail::to($user)->send(new PlayerUnknown());
-
         echo "success";
     }
+
 
     public function show()
     {
